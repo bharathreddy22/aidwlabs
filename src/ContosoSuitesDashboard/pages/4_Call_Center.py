@@ -11,7 +11,6 @@ from azure.ai.textanalytics import ExtractiveSummaryAction, AbstractiveSummaryAc
 from azure.cosmos import CosmosClient
 import openai
 
-
 st.set_page_config(layout="wide")
 
 @st.cache_data
@@ -44,7 +43,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
 
     def handle_final_result(evt):
         all_results.append(evt.result.text)
-
+        
     done = False
 
     def stop_cb(evt):
